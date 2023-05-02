@@ -1,4 +1,0 @@
-name <- readline(prompt="enter your name")
-age <- as.integer(readline(prompt="enter your age"))
-print(paste("hai",name,"next year you will be",age ,"years old"))
-print(R.version.string)
