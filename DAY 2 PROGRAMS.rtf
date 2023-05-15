@@ -1,0 +1,184 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9                                                     \fs44 DAY 2 PROGRAMS\par
+\fs24 1.Write a R program to create an array of two 3x3 matrices each with 3 rows and\par
+3 columns from two given two vectors. Print the second row of the second matrix\par
+of the array and the element in the 3rd row and 3rd column of the 1st matrix.\par
+PROGRAM:\par
+print("Two vectors of different lengths:")\par
+v1 =  c(1,3,4,5)\par
+v2 =  c(10,11,12,13,14,15)\par
+print(v1)\par
+print(v2)\par
+result = array(c(v1,v2),dim = c(3,3,2))\par
+print("New array:")\par
+print(result)\par
+print("The second row of the second matrix of the array:")\par
+print(result[2,,2])\par
+print("The element in the 3rd row and 3rd column of the 1st matrix:")\par
+print(result[3,3,1])\par
+\par
+2.\~Write a R program to combine three arrays so that the first row of the first\par
+array is followed by the first row of the second array and then first row of the third\par
+array.\par
+PROGRAM:\par
+num1 = rbind(rep("A",3), rep("B",3), rep("C",3))\par
+print("num1")\par
+print(num1)\par
+num2 = rbind(rep("P",3), rep("Q",3), rep("R",3))\par
+print("num2")\par
+print(num2)\par
+num3 = rbind(rep("X",3), rep("Y",3), rep("Z",3))\par
+print("num3")\par
+print(num3)\par
+a = matrix(t(cbind(num1,num2,num3)),ncol=3, byrow=T)\par
+print("Combine three arrays, taking one row from each one by one:")\par
+print(a)\par
+\par
+3.\~Write a R program to create an array using four given columns, three given\par
+rows, and two given tables and display the content of the array.\par
+PROGRAM:\par
+array1 =  array(1:30, dim=c(4,3,2))\par
+print(array1)\par
+\par
+4.\~Write a R program to create a two-dimensional 5x3 array of sequence of even\par
+integers greater than 50.\par
+PROGRAM:\par
+a <- array(seq(from = 50, length.out = 15, by = 2), c(5, 3))\par
+print("Content of the array:")\par
+print("5\'d73 array of sequence of even integers greater than 50:")\par
+print(a)\par
+\par
+Use Below Data frame from question 5 to 9\par
+\par
+exam_data = data.frame(\par
+name = c(&#39;Anastasia&#39;, &#39;Dima&#39;, &#39;Katherine&#39;, &#39;James&#39;, &#39;Emily&#39;,\par
+&#39;Michael&#39;, &#39;Matthew&#39;, &#39;Laura&#39;, &#39;Kevin&#39;, &#39;Jonas&#39;),\par
+score = c(12.5, 9, 16.5, 12, 9, 20, 14.5, 13.5, 8, 19),\par
+attempts = c(1, 3, 2, 3, 2, 3, 1, 1, 2, 1),\par
+qualify = c(&#39;yes&#39;, &#39;no&#39;, &#39;yes&#39;, &#39;no&#39;, &#39;no&#39;, &#39;yes&#39;, &#39;yes&#39;, &#39;no&#39;, &#39;no&#39;,\par
+&#39;yes&#39;)\par
+)\par
+5. Write a R program to extract 3 rd \~and 5 th \~rows with 1 st \~and 3 rd \~columns from a\par
+given data frame\par
+PROGRAM:\par
+name = c('Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas')\par
+score = c(12.5, 9, 16.5, 12, 9, 20, 14.5, 13.5, 8, 19)\par
+attempts = c(1, 3, 2, 3, 2, 3, 1, 1, 2, 1)\par
+qualify = c('yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes')\par
+print("Original data frame:")\par
+print(name)\par
+print(score)\par
+print(attempts)\par
+print(qualify)\par
+df = data.frame(name, score, attempts, qualify)  \par
+print(df)\par
+\par
+6. Write a R program to add a new column named country in a given data frame\par
+Country&lt;-c(&quot;USA&quot;,&quot;USA&quot;,&quot;USA&quot;,&quot;USA&quot;,&quot;UK&quot;,&quot;USA&quot;,&quot;USA&quot;,&quot;India&quot;,&quot;USA&quot;,&quot;USA&quot;)\par
+PROGRAM:\par
+exam_data = data.frame(\par
+  name = c('Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'),\par
+  score = c(12.5, 9, 16.5, 12, 9, 20, 14.5, 13.5, 8, 19),\par
+  attempts = c(1, 3, 2, 3, 2, 3, 1, 1, 2, 1),\par
+  qualify = c('yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes')\par
+)\par
+print("Original dataframe:")\par
+print(exam_data)\par
+print("New data frame after adding the 'country' column:")\par
+exam_data$country = c("USA","USA","USA","USA","USA","USA","USA","USA","USA","USA")\par
+print(exam_data)\par
+\par
+7. Write a R program to add new row(s) to an existing data frame\par
+new_exam_data = data.frame(name = c(Robert;, SophiaL = sample(LETTERS,size=50,replace=TRUE)\par
+print("Original data:")\par
+print(L)\par
+f = factor(L)\par
+print("Original factors:")\par
+print(f)\par
+print("Only five of the levels")\par
+print(table(L[1:5]));),score =\par
+c(10.5, 9), attempts = c(1, 3),qualify = c(&#39;yes&#39;, &#39;no&#39;))\par
+PROGRAM:\par
+exam_data = data.frame(\par
+  name = c('Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'),\par
+  score = c(12.5, 9, 16.5, 12, 9, 20, 14.5, 13.5, 8, 19),\par
+  attempts = c(1, 3, 2, 3, 2, 3, 1, 1, 2, 1),\par
+  qualify = c('yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes')\par
+)\par
+print("Original dataframe:")\par
+print(exam_data)\par
+new_exam_data = data.frame(\par
+  name = c('Robert', 'Sophia'),\par
+  score = c(10.5, 9),\par
+  attempts = c(1, 3),\par
+  qualify = c('yes', 'no')\par
+)\par
+exam_data =  rbind(exam_data, new_exam_data)\par
+print("After adding new row(s) to an existing data frame:")\par
+print(exam_data)\par
+\par
+8. Write a R program to sort a given data frame by name and score\par
+PROGRAM:\par
+exam_data = data.frame(\par
+  name = c('Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'),\par
+  score = c(12.5, 9, 16.5, 12, 9, 20, 14.5, 13.5, 8, 19),\par
+  attempts = c(1, 3, 2, 3, 2, 3, 1, 1, 2, 1),\par
+  qualify = c('yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes')\par
+)\par
+print("Original dataframe:")\par
+print(exam_data)\par
+print("dataframe after sorting 'name' and 'score' columns:")\par
+exam_data = exam_data[with(exam_data, order(name, score)), ]\par
+print(exam_data)\par
+\par
+9. \~Write a R program to save the information of a data frame in a file and display\par
+the information of the file.\par
+PROGRAM:\par
+exam_data = data.frame(\par
+  name = c('Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'),\par
+  score = c(12.5, 9, 16.5, 12, 9, 20, 14.5, 13.5, 8, 19),\par
+  attempts = c(1, 3, 2, 3, 2, 3, 1, 1, 2, 1),\par
+  qualify = c('yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes')\par
+)\par
+print("Original dataframe:")\par
+print(exam_data)\par
+save(exam_data,file="data.rda")\par
+load("data.rda")\par
+file.info("data.rda") \par
+\par
+10. Write a R program to call the (built-in) dataset airquality. Check whether it is a\par
+data frame or not? Order the entire data frame by the first and second column.\par
+remove the variables &#39;Solar.R&#39; and &#39;Wind&#39; and display the data frame.\par
+PROGRAM:\par
+data = airquality\par
+print("Original data: Daily air quality measurements in New York, May to September 1973.")\par
+print(class(data))\par
+print(head(data,10))\par
+result = data[order(data[,1]),]\par
+print("Order the entire data frame by the first and second column:")\par
+print(result)\par
+\par
+11. Write a R program to create a factor corresponding to height of women data\par
+set , which inbuild in R, contains height and weights for a sample of women.\par
+PROGRAM:\par
+data = women\par
+print("Women data set of height and weights:")\par
+print(data)\par
+height_f = cut(women$height,3)\par
+print("Factor corresponding to height:")\par
+print(table(height_f))\par
+\par
+12. Write a R program to extract the five of the levels of factor created from a\par
+random sample from the LETTERS (Part of the base R distribution.)\par
+PROGRAM:\par
+L = sample(LETTERS,size=50,replace=TRUE)\par
+print("Original data:")\par
+print(L)\par
+f = factor(L)\par
+print("Original factors:")\par
+print(f)\par
+print("Only five of the levels")\par
+print(table(L[1:5]))\fs28\par
+}
+ 
